@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title> Get your Rookie </title>
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>NBA ROOKIE PREDICTION </h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="GP" placeholder="GP" required="required" />
+        <input type="text" name="MIN" placeholder="MIN" required="required" />
+		<input type="text" name="PTS" placeholder="PTS" required="PTS" />
+		<input type="text" name="FGM" placeholder="FGM" required="required" />
+        <input type="text" name="FGA" placeholder="FGA" required="required" />
+        <input type="text" name="FG%" placeholder="FG%" required="required" />
+        <input type="text" name="FTM" placeholder="FTM" required="required" />
+        <input type="text" name="FTA" placeholder="FTA" required="required" />
+        <input type="text" name="FT%" placeholder="FT%" required="required" />
+        <input type="text" name="OREB" placeholder="OREB" required="required" />
+        <input type="text" name="DREB" placeholder="DREB" required="required" />
+        <input type="text" name="REB" placeholder="REB" required="required" />
+        <input type="text" name="AST" placeholder="AST" required="required" />
+        <input type="text" name="STL" placeholder="STL" required="required" />
+        <input type="text" name="BLK" placeholder="BLK" required="required" />
+        <input type="text" name="TOV" placeholder="TOV" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+
+</body>
+</html>
